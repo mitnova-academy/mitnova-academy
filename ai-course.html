@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Introduction to Artificial Intelligence | MITNOVA Academy</title>
+  <meta name="description" content="A beginner course in artificial intelligence: learn what AI is, how it works, where it is used and how to use AI tools responsibly.">
+  <meta name="theme-color" content="#0a1d3a">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Extras used only on this course page -->
+  <style>
+    .breadcrumb { margin: 0 0 1.2rem; font-size: .95rem; color: #aebad0; }
+    .breadcrumb a { color: var(--gold-light); }
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    .course-facts { grid-template-columns: repeat(2, 1fr); }
+    .course-facts li { padding: .9rem 1rem; font-size: .95rem; }
+    .course-facts strong { font-size: 1.25rem; }
+
+    .modules { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; gap: 1rem; }
+    .module { background: var(--white); border: 1px solid #dfe5ef; border-left: 5px solid var(--gold); border-radius: 12px; padding: 1.25rem 1.4rem; box-shadow: 0 6px 20px rgba(10,29,58,.06); }
+    .module-label { display: inline-block; margin-bottom: .5rem; padding: .15rem .75rem; border-radius: 999px; background: var(--navy); color: var(--gold-light); font-size: .8rem; font-weight: 600; letter-spacing: .03em; }
+    .module h3 { font-size: 1.15rem; margin-bottom: .35rem; }
+    .module p { margin: 0; color: var(--muted); }
+
+    .learn-list { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; gap: .9rem; }
+    .learn-list li { position: relative; padding: .3rem 0 .3rem 2.4rem; }
+    .learn-list li::before { content: "\2713"; position: absolute; left: 0; top: .2rem; display: grid; place-items: center; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: var(--navy); color: var(--gold-light); font-size: .95rem; font-weight: 700; }
+
+    .main-nav a[aria-current="page"]:not(.btn) { color: var(--gold-light); }
+
+    @media (min-width: 700px) {
+      .learn-list { grid-template-columns: repeat(2, 1fr); gap: 1.1rem 2rem; }
+      .modules { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 900px) {
+      .course-facts { grid-template-columns: repeat(4, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header" id="top">
+    <div class="container nav-bar">
+      <a href="index.html" class="brand" aria-label="MITNOVA Academy home">
+        <span class="brand-mark">M</span>
+        <span class="brand-name">MITNOVA <small>Academy</small></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="courses.html" aria-current="page">Courses</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#join" class="btn btn-gold btn-small">Join</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Course introduction -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="breadcrumb"><a href="courses.html">Courses</a> &rsaquo; Artificial Intelligence</p>
+        <p class="hero-tag">Beginner course</p>
+        <h1>Introduction to Artificial Intelligence</h1>
+        <p class="hero-text">Learn what AI is, how it works, where it is used, and how to begin using AI tools responsibly. No experience needed.</p>
+        <div class="hero-actions">
+          <a href="index.html#join" class="btn btn-gold">Join the waiting list</a>
+          <a href="#curriculum" class="btn btn-outline">View curriculum</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course information -->
+    <section class="section">
+      <div class="container">
+        <ul class="facts course-facts">
+          <li><strong>Beginner</strong> level</li>
+          <li><strong>6</strong> modules</li>
+          <li><strong>Practical</strong> learning</li>
+          <li><strong>Designed</strong> for beginners</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Curriculum -->
+    <section class="section section-alt" id="curriculum">
+      <div class="container">
+        <h2>Course curriculum</h2>
+        <p class="section-intro">Six modules that take you from the basics to your first practical AI project.</p>
+
+        <ol class="modules">
+          <li class="module">
+            <span class="module-label">Module 1</span>
+            <h3>Understanding Artificial Intelligence</h3>
+            <p>What AI is, where it came from, and the everyday examples you already use.</p>
+          </li>
+          <li class="module">
+            <span class="module-label">Module 2</span>
+            <h3>How AI Works</h3>
+            <p>Data, patterns and learning explained in simple words, with no maths needed.</p>
+          </li>
+          <li class="module">
+            <span class="module-label">Module 3</span>
+            <h3>Understanding AI Tools</h3>
+            <p>Explore popular AI assistants and tools, and learn how to choose the right one.</p>
+          </li>
+          <li class="module">
+            <span class="module-label">Module 4</span>
+            <h3>Prompt Engineering</h3>
+            <p>Write clear instructions that get useful, accurate answers from AI.</p>
+          </li>
+          <li class="module">
+            <span class="module-label">Module 5</span>
+            <h3>AI for Business and Work</h3>
+            <p>Use AI to save time on writing, research, planning and customer service.</p>
+          </li>
+          <li class="module">
+            <span class="module-label">Module 6</span>
+            <h3>Your First Practical AI Project</h3>
+            <p>Bring everything together by completing a small project of your own.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- What you will learn -->
+    <section class="section" id="learn">
+      <div class="container">
+        <h2>What You Will Learn</h2>
+        <p class="section-intro">By the end of this course you will be able to:</p>
+
+        <ul class="learn-list">
+          <li>Explain what AI is and how it works in simple terms</li>
+          <li>Spot AI in everyday life, work and business</li>
+          <li>Use popular AI tools with confidence</li>
+          <li>Write clear prompts that give better results</li>
+          <li>Use AI responsibly: check facts, protect privacy and avoid misuse</li>
+          <li>Complete a practical project that shows what you can do</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Enrolment / waiting list -->
+    <section class="cta">
+      <div class="container cta-inner">
+        <h2>Ready to start learning AI?</h2>
+        <p>Join the waiting list and be among the first students to take Introduction to Artificial Intelligence.</p>
+        <a href="index.html#join" class="btn btn-gold">Join the waiting list</a>
+        <p class="cta-note">Enrolment opens soon.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">MITNOVA Academy</p>
+        <p>Learn. Build. Innovate.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#join">Join</a>
+      </nav>
+    </div>
+    <p class="copyright">&copy; <span id="year">2026</span> MITNOVA AI. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
