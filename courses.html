@@ -3,428 +3,223 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Courses | MITNOVA Academy</title>
-
-  <meta name="description" content="Explore beginner-friendly AI, cybersecurity, programming and digital entrepreneurship courses at MITNOVA Academy.">
-
+  <meta name="description" content="Explore beginner-friendly AI, cybersecurity, programming and digital business courses at MITNOVA Academy.">
   <meta name="theme-color" content="#0a1d3a">
-
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* COURSE PAGE STYLES */
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .course-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    }
+
+    .course-card h3 {
+      margin: 15px 0 10px;
+    }
+
+    .course-icon {
+      font-size: 38px;
+    }
+
+    .course-card p {
+      line-height: 1.7;
+    }
+
+    .level {
+      display: inline-block;
+      background: #f5ecd9;
+      color: #8a671d;
+      padding: 6px 12px;
+      border-radius: 30px;
+      font-size: 13px;
+      margin: 12px 0;
+    }
+
+    .course-card .btn {
+      margin-top: 15px;
+      display: inline-block;
+    }
 
     .catalogue-hero {
-      padding: 70px 20px 50px;
+      padding: 80px 20px;
       text-align: center;
     }
 
     .catalogue-hero h1 {
-      font-size: clamp(32px, 6vw, 52px);
-      margin-bottom: 20px;
+      font-size: clamp(32px, 5vw, 52px);
     }
 
     .catalogue-hero p {
-      max-width: 700px;
-      margin: 0 auto;
+      max-width: 650px;
+      margin: 15px auto;
       line-height: 1.8;
     }
 
-    .catalogue-label {
-      display: inline-block;
-      background: #f5ecd9;
-      color: #8a671d;
-      padding: 8px 18px;
-      border-radius: 50px;
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-
-    .course-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
-    }
-
-    .course-card {
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 20px;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
-      transition: transform 0.3s ease,
-                  box-shadow 0.3s ease;
-    }
-
-    .course-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-    }
-
-    .course-icon {
-      font-size: 45px;
-      margin-bottom: 15px;
-    }
-
-    .course-card h3 {
-      font-size: 24px;
-      margin-bottom: 15px;
-    }
-
-    .course-card p {
-      line-height: 1.8;
-      color: #596579;
-      margin-bottom: 20px;
-    }
-
-    .course-level {
-      display: inline-block;
-      background: #f5ecd9;
-      color: #8a671d;
-      padding: 8px 15px;
-      border-radius: 50px;
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-
-    .course-card .btn {
-      display: inline-block;
-      margin-top: 5px;
-    }
-
-    .beginner-section {
-      padding: 70px 0;
-    }
-
-    .beginner-section h2 {
-      margin-bottom: 20px;
-    }
-
-    .beginner-section p {
-      max-width: 750px;
-      line-height: 1.8;
-      color: #596579;
-    }
-
-    .course-note {
-      background: #f8f9fb;
-      border-left: 4px solid #c9a24b;
-      padding: 20px;
-      margin-top: 35px;
-      border-radius: 8px;
-      line-height: 1.8;
-    }
-
-    /* MOBILE RESPONSIVENESS */
-
-    @media (max-width: 768px) {
-
-      .catalogue-hero {
-        padding: 55px 20px 35px;
-      }
-
-      .course-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .course-card {
-        padding: 25px;
-      }
-
-      .course-card h3 {
-        font-size: 22px;
-      }
-
-      .beginner-section {
-        padding: 50px 0;
-      }
-    }
-
+    .main-nav a[aria-current="page"]:not(.btn) { color: var(--gold-light); }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
+<header class="site-header" id="top">
+  <div class="container nav-bar">
+    <a href="index.html" class="brand" aria-label="MITNOVA Academy home">
+      <span class="brand-mark">M</span>
+      <span class="brand-name">MITNOVA <small>Academy</small></span>
+    </a>
 
-  <header class="site-header">
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
 
-    <div class="container header-inner">
+    <nav class="main-nav" id="mainNav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="courses.html" aria-current="page">Courses</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#join" class="btn btn-gold btn-small">Join</a>
+    </nav>
+  </div>
+</header>
 
-      <a href="index.html" class="logo">
-        <span class="logo-mark">M</span>
-        <span>MITNOVA Academy</span>
+<main>
+
+  <section class="catalogue-hero">
+    <div class="container">
+      <span class="level">Learn at your own pace</span>
+      <h1>Explore Your Learning Journey</h1>
+      <p>
+        Discover practical, beginner-friendly courses designed to help you
+        develop new skills, understand technology and prepare for the future.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="course-grid">
+
+        <!-- Artificial Intelligence -->
+        <article class="course-card">
+          <div class="course-icon">🤖</div>
+          <h3>Artificial Intelligence</h3>
+          <p>
+            Discover AI, learn how AI tools work, master prompting
+            and explore how AI can help in business and everyday life.
+          </p>
+          <span class="level">Beginner</span>
+          <br>
+          <a href="ai-course.html" class="btn btn-gold">
+            Explore Course
+          </a>
+        </article>
+
+        <!-- Cybersecurity -->
+        <article class="course-card">
+          <div class="course-icon">🔐</div>
+          <h3>Cybersecurity</h3>
+          <p>
+            Learn cybersecurity fundamentals, online safety,
+            digital threats and how to protect information.
+          </p>
+          <span class="level">Beginner</span>
+          <br>
+          <a href="index.html#join" class="btn btn-gold">
+            Join Waiting List
+          </a>
+        </article>
+
+        <!-- Programming -->
+        <article class="course-card">
+          <div class="course-icon">💻</div>
+          <h3>Programming &amp; Software Development</h3>
+          <p>
+            Start learning programming, understand how websites
+            and applications are created, and build practical projects.
+          </p>
+          <span class="level">Beginner</span>
+          <br>
+          <a href="index.html#join" class="btn btn-gold">
+            Join Waiting List
+          </a>
+        </article>
+
+        <!-- Digital Entrepreneurship -->
+        <article class="course-card">
+          <div class="course-icon">📈</div>
+          <h3>Digital Entrepreneurship</h3>
+          <p>
+            Learn how to start a digital business, use online tools,
+            market your services and develop business ideas.
+          </p>
+          <span class="level">Beginner</span>
+          <br>
+          <a href="index.html#join" class="btn btn-gold">
+            Join Waiting List
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Designed for Beginners</h2>
+      <p class="section-intro">
+        You don't need to be an expert or have advanced technical knowledge.
+        Our courses are designed to help you learn step by step,
+        practise new skills and build confidence.
+      </p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container cta-inner">
+      <h2>Invest in Your Future</h2>
+      <p>
+        Join MITNOVA Academy and start developing skills
+        for the digital world.
+      </p>
+      <a href="index.html#join" class="btn btn-gold">
+        Join Our Waiting List
       </a>
+    </div>
+  </section>
 
-      <button
-        class="menu-toggle"
-        id="menuToggle"
-        aria-label="Open menu"
-        aria-expanded="false"
-      >
-        ☰
-      </button>
+</main>
 
-      <nav class="main-nav" id="mainNav">
-
-        <a href="index.html">Home</a>
-
-        <a href="courses.html" class="active">Courses</a>
-
-        <a href="index.html#about">About</a>
-
-        <a href="index.html#join">Join</a>
-
-      </nav>
-
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="footer-brand">MITNOVA Academy</p>
+      <p>Learn. Build. Innovate.</p>
     </div>
 
-  </header>
-
-  <!-- MAIN CONTENT -->
-
-  <main>
-
-    <!-- HERO -->
-
-    <section class="catalogue-hero">
-
-      <div class="container">
-
-        <span class="catalogue-label">
-          Learn at Your Own Pace
-        </span>
-
-        <h1>Explore Your Learning Journey</h1>
-
-        <p>
-          Discover practical, beginner-friendly courses designed
-          to help you develop new skills, understand technology
-          and prepare for the digital future.
-        </p>
-
-      </div>
-
-    </section>
-
-    <!-- COURSES -->
-
-    <section class="section">
-
-      <div class="container">
-
-        <div class="course-grid">
-
-          <!-- ARTIFICIAL INTELLIGENCE -->
-
-          <article class="course-card">
-
-            <div class="course-icon">🤖</div>
-
-            <h3>Artificial Intelligence</h3>
-
-            <p>
-              Discover artificial intelligence, learn how AI works,
-              explore popular AI tools, master prompting and learn
-              how to use AI in business and everyday life.
-            </p>
-
-            <span class="course-level">
-              Beginner
-            </span>
-
-            <br>
-
-            <a href="ai-course.html" class="btn btn-gold">
-              Explore Course
-            </a>
-
-          </article>
-
-          <!-- CYBERSECURITY -->
-
-          <article class="course-card">
-
-            <div class="course-icon">🔐</div>
-
-            <h3>Cybersecurity</h3>
-
-            <p>
-              Learn cybersecurity fundamentals, online safety,
-              digital threats, networking basics and how to
-              protect information and systems.
-            </p>
-
-            <span class="course-level">
-              Beginner
-            </span>
-
-            <br>
-
-            <a href="index.html#join" class="btn btn-gold">
-              Join Waiting List
-            </a>
-
-          </article>
-
-          <!-- PROGRAMMING -->
-
-          <article class="course-card">
-
-            <div class="course-icon">💻</div>
-
-            <h3>Programming & Software Development</h3>
-
-            <p>
-              Start learning programming, explore how websites
-              and applications are developed and build your
-              first practical digital projects.
-            </p>
-
-            <span class="course-level">
-              Beginner
-            </span>
-
-            <br>
-
-            <a href="index.html#join" class="btn btn-gold">
-              Join Waiting List
-            </a>
-
-          </article>
-
-          <!-- DIGITAL ENTREPRENEURSHIP -->
-
-          <article class="course-card">
-
-            <div class="course-icon">📈</div>
-
-            <h3>Digital Entrepreneurship</h3>
-
-            <p>
-              Learn how to start a digital business, use online
-              tools, market your services, develop business ideas
-              and explore digital income opportunities.
-            </p>
-
-            <span class="course-level">
-              Beginner
-            </span>
-
-            <br>
-
-            <a href="index.html#join" class="btn btn-gold">
-              Join Waiting List
-            </a>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- BEGINNER SECTION -->
-
-    <section class="beginner-section">
-
-      <div class="container">
-
-        <h2>Designed for Beginners</h2>
-
-        <p>
-          You don't need to be an expert or have advanced
-          technical knowledge. Our courses are designed to help
-          you learn step by step, practise new skills and
-          build confidence as you progress.
-        </p>
-
-        <div class="course-note">
-
-          <strong>Our learning approach:</strong>
-
-          <br><br>
-
-          Learn through simple explanations, practical examples,
-          activities, quizzes and projects that help you apply
-          what you have learned in real situations.
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- CTA -->
-
-    <section class="cta">
-
-      <div class="container cta-inner">
-
-        <h2>Invest in Your Future</h2>
-
-        <p>
-          Start developing the skills you need for the
-          digital world with MITNOVA Academy.
-        </p>
-
-        <a href="index.html#join" class="btn btn-gold">
-          Join Our Waiting List
-        </a>
-
-      </div>
-
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-
-  <footer class="site-footer">
-
-    <div class="container footer-inner">
-
-      <div>
-
-        <p class="footer-brand">
-          MITNOVA Academy
-        </p>
-
-        <p>
-          Learn. Build. Innovate.
-        </p>
-
-      </div>
-
-      <nav class="footer-nav" aria-label="Footer Navigation">
-
-        <a href="index.html">Home</a>
-
-        <a href="courses.html">Courses</a>
-
-        <a href="index.html#about">About</a>
-
-        <a href="index.html#join">Join</a>
-
-      </nav>
-
-    </div>
-
-    <p class="copyright">
-
-      &copy; <span id="year">2026</span>
-      MITNOVA AI. All rights reserved.
-
-    </p>
-
-  </footer>
-
-  <!-- JAVASCRIPT -->
-
-  <script src="script.js"></script>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#join">Join</a>
+    </nav>
+  </div>
+
+  <p class="copyright">
+    &copy; <span id="year">2026</span> MITNOVA AI. All rights reserved.
+  </p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
